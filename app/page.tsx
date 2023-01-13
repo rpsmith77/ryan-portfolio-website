@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import Loading from "./loading";
-import Link from "next/link";
 import LinkedIn from "../public/linkedin-outline.svg"
 import Github from "../public/github-outline.svg"
 import Email from "../public/mail-05.svg"
@@ -9,14 +7,11 @@ import HandWave from "./HandWave";
 
 export default function Home() {
 
-
-
     return (
         <div className={styles.container}>
             <main>
                 <div className={styles.heroSection}>
                     <div className={styles.heroText}>
-                        {/*<h2><span className={styles.wave}>👋</span> Welcome!</h2>*/}
                         <h2><HandWave/> Welcome!</h2>
                         <h1 className={styles.heroGradientText}>
                             <span className={styles.heroNormalText}>I&apos;m </span>
