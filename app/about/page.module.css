@@ -1,0 +1,93 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.profile {
+    margin: auto;
+    width: clamp(16rem, 90vw, 1000px + 2rem);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    gap: 1rem;
+    /*flex-basis: 500px;*/
+}
+
+
+.profilePic {
+    transition: all .2s ease-in-out;
+}
+
+.profilePic:hover {
+    /*filter: grayscale(1);*/
+}
+
+.profileDesc {
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    gap: 1rem;
+}
+
+.profileDesc p {
+    margin: 0;
+}
+
+.box {
+    margin: auto;
+    width: clamp(16rem, 90vw, 50rem);
+    aspect-ratio: 1;
+    background: #E63946;
+}
+
+.profileDescLink {
+    color: var(--accent);
+}
+
+.profileDescLink:hover {
+    text-decoration: underline;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: clamp(16rem, 90vw, 1000px + 2rem);
+}
+
+.experience h1 {
+    color: var(--accent);
+    font-variant: small-caps;
+}
+
+.job {
+    padding-top: 2rem;
+}
+
+.jobTitle {
+
+}
+
+.jobDate {
+
+}
+
+.jobDesc {
+
+}
+
+
+@media (max-width: 1005px) {
+    .profile {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 800px) {
+    .profilePic {
+        transform: scale(.8);
+    }
+}
