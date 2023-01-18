@@ -33,7 +33,7 @@ nav a h3 {
     transition: all .2s ease-in-out;
 }
 
-nav a h3:hover{
+nav a h3:hover {
     text-decoration: underline;
     transform: scale(1.1);
 }
@@ -63,17 +63,9 @@ a {
     text-decoration: none;
 }
 
-/*a:hover {*/
-/*    background: rgb(230,57,70);*/
-/*    background: linear-gradient(153deg, rgba(230,57,70,1) 0%, rgba(29,53,87,1) 100%);*/
-/*    -webkit-background-clip: text;*/
-/*    -webkit-text-fill-color: transparent;*/
-/*}*/
-
 * {
     box-sizing: border-box;
 }
-
 
 .colorPrimary {
     color: var(--primary);
