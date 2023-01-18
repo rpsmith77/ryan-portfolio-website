@@ -46,19 +46,49 @@ export default function projects() {
             image: '/art-gallery.svg',
             website: 'https://devpost.com/software/generative-art-z7swoc'
         },
+    ];
+    const otherProjects = [
+        {
+            title: 'Manufacturing Production Prototype',
+            subtitle: 'Simulates the creation, production, and logging for a manufacturing plant.',
+            description: 'This project is prototype for a manufacturing plant. It has a database which stores products that are producible and stores the record of the production, including the products serial number and date produced. This project was a semester long project for COP 3003, Object-Oriented Programming. The purpose of this project is to demonstrate a working knowledge of concepts like encapsulation, polymorphism, inheritance, and abstraction.',
+            builtWith: ['Gradle', 'Java', "JavaFX", "SceneBuilder", "IntelliJ", "H2 DB", "OOP"],
+            website: "https://github.com/rpsmith77/ProductionProject"
+        },
+        {
+            title: 'Pathfinding Visualizer',
+            subtitle: 'KnightHacks 2020 Entry: Visualizes how the A* pathfinding algorithm works',
+            description: 'The user can specify the starting and ending nodes, as well as place walls or obstacles on the grid. The program will then use a pathfinding algorithm, A* in this case, to find the shortest path from the starting node to the ending node. The program will also display a visual representation of the search process, highlighting the nodes that have been searched and the path that was ultimately found. This can be useful for understanding how different pathfinding algorithms work and how they might perform in different scenarios.',
+            builtWith: ['Python', 'PyGame', 'A*', 'PyCharm'],
+            website: 'https://github.com/rpsmith77/KnightHacks'
+        },
+        {
+            title: 'Asteroids!',
+            subtitle: 'Modified version of the classic arcade game Asteroids!',
+            description: 'I have developed a modified version of the classic arcade game, Asteroids, using C++ and the libraries SFML and OpenGL. A simple physics engine based on vector math is also implemented to provide realistic motion for the spaceship as it navigates the asteroid field.',
+            builtWith: ['C++', 'SFML', 'OpenGL', 'OOP', 'Xcode'],
+            website: "https://github.com/rpsmith77/Asteroids"
+        },
+        {
+            title: 'Traffic Light Simulator',
+            subtitle: '',
+            description: 'This traffic light that I built, utilizes global interrupts, pointer arrays, and timers. These features allows the microcontroller to respond to external events in real-time, store and access data in a more organized and efficient way and keep track of time and trigger events at specific intervals. The traffic light was built using assembly language and hand wired by me.',
+            builtWith: ['Assembly', 'Arduino', 'Atmel Studios'],
+            website: 'https://github.com/rpsmith77/AssemblyTrafficLightSim'
+        },
     ]
 
     return (
         <div className={styles.container}>
             <main className={styles.main}>
                 <div className={styles.projectHeroContainer}>
-                    {/*<h1>The <span className={'colorAccent'}>Cool Stuff</span> I make.</h1>*/}
+                    <h1>The <span className={'colorAccent'}>Cool Stuff</span> I make.</h1>
                     {/*<h1>I&nbsp;<TypingEffect/></h1>*/}
                 </div>
                 <div className={styles.featuredProjects}>
                     {featuredProjects.map((project: any) =>
                         <Project title={project.title}
-                                 key = {project.title}
+                                 key={project.title}
                                  subtitle={project.subtitle}
                                  description={project.description}
                                  builtWith={project.builtWith}
@@ -68,14 +98,31 @@ export default function projects() {
                     )}
                 </div>
                 <div className={styles.moreProjectsContainer}>
-                    <a className={styles.moreProjects}
-                       href={'https://github.com/rpsmith77?tab=repositories'}
-                       target={'_blank'} rel="noreferrer">
-                        <h1>More Projects</h1>
-                        <Image className={styles.github} src={Github} alt={'GitHub Link'} width={100} height={100}/>
-                    </a>
+                    <div className={styles.moreProjects}>
+
+                        <h1 className={'colorAccent'}>More Projects</h1>
+                        <div className={styles.otherProjects}>
+                            {otherProjects.map((project: any) =>
+                                <Project title={project.title}
+                                         key={project.title}
+                                         subtitle={project.subtitle}
+                                         description={project.description}
+                                         builtWith={project.builtWith}
+                                         image={project.image ? project.image : null}
+                                         website={project.website ? project.website : null}
+                                />
+                            )}
+                        </div>
+                        <h2>Even More Projects</h2>
+                        <a href={'https://github.com/rpsmith77?tab=repositories'}
+                           target={'_blank'} rel="noreferrer">
+                            <Image className={styles.github} src={Github} alt={'GitHub Link'} width={100} height={100}/>
+                        </a>
+
+                    </div>
                 </div>
             </main>
         </div>
-    );
+    )
+        ;
 }
