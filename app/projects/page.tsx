@@ -56,13 +56,6 @@ export default function projects() {
             website: "https://github.com/rpsmith77/ProductionProject"
         },
         {
-            title: 'Pathfinding Visualizer',
-            subtitle: 'KnightHacks 2020 Entry: Visualizes how the A* pathfinding algorithm works',
-            description: 'The user can specify the starting and ending nodes, as well as place walls or obstacles on the grid. The program will then use a pathfinding algorithm, A* in this case, to find the shortest path from the starting node to the ending node. The program will also display a visual representation of the search process, highlighting the nodes that have been searched and the path that was ultimately found. This can be useful for understanding how different pathfinding algorithms work and how they might perform in different scenarios.',
-            builtWith: ['Python', 'PyGame', 'A*', 'PyCharm'],
-            website: 'https://github.com/rpsmith77/KnightHacks'
-        },
-        {
             title: 'Asteroids!',
             subtitle: 'Modified version of the classic arcade game Asteroids!',
             description: 'I have developed a modified version of the classic arcade game, Asteroids, using C++ and the libraries SFML and OpenGL. A simple physics engine based on vector math is also implemented to provide realistic motion for the spaceship as it navigates the asteroid field.',
@@ -71,10 +64,17 @@ export default function projects() {
         },
         {
             title: 'Traffic Light Simulator',
-            subtitle: '',
+            subtitle: 'Prototype of Traffic Light with a crosswalk',
             description: 'This traffic light that I built, utilizes global interrupts, pointer arrays, and timers. These features allows the microcontroller to respond to external events in real-time, store and access data in a more organized and efficient way and keep track of time and trigger events at specific intervals. The traffic light was built using assembly language and hand wired by me.',
             builtWith: ['Assembly', 'Arduino', 'Atmel Studios'],
             website: 'https://github.com/rpsmith77/AssemblyTrafficLightSim'
+        },
+        {
+            title: 'Pathfinding Visualizer',
+            subtitle: 'KnightHacks 2020 Entry: Visualizes how the A* pathfinding algorithm works',
+            description: 'The user can specify the starting and ending nodes, as well as place walls or obstacles on the grid. The program will then use a pathfinding algorithm, A* in this case, to find the shortest path from the starting node to the ending node. The program will also display a visual representation of the search process, highlighting the nodes that have been searched and the path that was ultimately found. This can be useful for understanding how different pathfinding algorithms work and how they might perform in different scenarios.',
+            builtWith: ['Python', 'PyGame', 'A*', 'PyCharm'],
+            website: 'https://github.com/rpsmith77/KnightHacks'
         },
     ]
 

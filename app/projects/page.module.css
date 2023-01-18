@@ -50,7 +50,6 @@
 .featuredProjects > .project:hover {
     transform: translate3d(0, -5px, 0);
     box-shadow: 0 5px 0 0 var(--secondary);
-    /*color: var(--accent)*/
 }
 
 .featuredProjects > .project > .text {
@@ -94,6 +93,7 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    gap: 1rem;
 }
 
 .otherProjects {
