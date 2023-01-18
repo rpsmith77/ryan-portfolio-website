@@ -1,6 +1,8 @@
 import './globals.css'
 import NavBar from "./NavBar";
 import React from "react";
+import {AnalyticsWrapper} from './Analytics';
+
 
 export default function RootLayout({
                                        children,
@@ -18,6 +20,7 @@ export default function RootLayout({
         <body>
         <NavBar/>
         {children}
+        <AnalyticsWrapper/>
         </body>
         </html>
     )
