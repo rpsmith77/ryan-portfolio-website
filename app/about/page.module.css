@@ -4,43 +4,71 @@
     row-gap: 1rem;
 }
 
+.main:nth-child(1) {
+    margin-top: 4rem;
+}
+.main:last-child {
+    margin-bottom: 2rem;
+}
+
 .profile {
     margin: auto;
-    width: clamp(16rem, 90vw, 1000px + 2rem);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    width: clamp(16rem, 90vw, 1100px + 2rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header header header"
+    "picture picture text text"
+    "footer footer footer footer";
     justify-content: center;
-    min-height: 90vh;
+    align-content: center;
     gap: 1rem;
-    /*flex-basis: 500px;*/
+    background-color: var(--ternary);
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem 2rem 1rem 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.profile:hover {
+    transform: translate3d(0, -5px, 0);
+    box-shadow: 0 5px 0 0 var(--secondary);
+}
+
+.profileHeader {
+    grid-area: header;
 }
 
 
 .profilePic {
     transition: all .2s ease-in-out;
-}
-
-.profilePic:hover {
-    /*filter: grayscale(1);*/
+    grid-area: picture;
+    place-self: center;
 }
 
 .profileDesc {
-    display: flex;
-    flex-direction: column;
-    justify-items: start;
-    gap: 1rem;
+    grid-area: text;
+    place-self: center;
+    background-color: var(--ternary);
+    height: 100%;
 }
 
 .profileDesc p {
     margin: 0;
 }
 
-.box {
-    margin: auto;
-    width: clamp(16rem, 90vw, 50rem);
-    aspect-ratio: 1;
-    background: #E63946;
+.profileDesc h3 {
+    font-weight: normal;
+    margin: 0;
+}
+
+.profileFooter {
+    grid-area: footer;
+}
+
+.italics {
+    font-style: italic;
 }
 
 .profileDescLink {
@@ -56,15 +84,55 @@
     flex-direction: column;
     margin: auto;
     width: clamp(16rem, 90vw, 1000px + 2rem);
+    row-gap: 1rem;
+    /*background-color: var(--ternary);*/
+    /*border-radius: 1rem;*/
+    /*overflow: hidden;*/
+    /*padding: 1rem 2rem 1rem 2rem;*/
+    /*transition: all .2s ease-in-out;*/
 }
+
+/*.experience:hover {*/
+/*    transform: translate3d(0, -5px, 0);*/
+/*    box-shadow: 0 5px 0 0 var(--secondary);*/
+/*}*/
 
 .experience h1 {
     color: var(--accent);
-    font-variant: small-caps;
 }
 
+.experienceTitle {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume {
+    color: black;
+}
+
+.resume {
+    filter: invert(16%) sepia(14%) saturate(4193%) hue-rotate(185deg) brightness(90%) contrast(88%);
+    transition: all .2s ease-in-out;
+}
+
+.resume:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+
 .job {
-    padding-top: 2rem;
+    background-color: var(--ternary);
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem 2rem 1rem 2rem;
+    transition: all .2s ease-in-out;
+}
+.job:hover {
+        transform: translate3d(0, -5px, 0);
+        box-shadow: 0 5px 0 0 var(--secondary);
 }
 
 .jobTitle {
@@ -80,14 +148,23 @@
 }
 
 
+
+
 @media (max-width: 1005px) {
     .profile {
-        flex-wrap: wrap;
+        grid-template-areas:
+        "header header header header"
+        "picture picture picture picture"
+        "text text text text"
+        "footer footer footer footer";
+        row-gap: .5rem;
     }
-}
 
-@media (max-width: 800px) {
+    .profileHeader {
+        text-align: center;
+    }
+
     .profilePic {
-        transform: scale(.8);
+        transform: scale(.85);
     }
 }

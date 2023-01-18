@@ -1,6 +1,7 @@
 .main {
     margin-top: 43px;
 }
+
 .projectHeroContainer {
     display: flex;
     align-content: center;
@@ -8,7 +9,7 @@
     text-align: center;
 }
 
-.typingText::after{
+.typingText::after {
     content: '|';
     animation: blink 1s steps(2) infinite;
 }
@@ -26,6 +27,11 @@
     padding: 1rem 0 1rem 0;
 }
 
+.project p{
+    text-align: justify;
+    text-justify: auto;
+}
+
 .featuredProjects > .project {
     margin: auto;
     background-color: var(--ternary);
@@ -37,6 +43,8 @@
     flex-direction: row;
     align-items: center;
     padding: 10px;
+    align-content: center;
+    justify-content: center;
 }
 
 .featuredProjects > .project:hover {
@@ -50,7 +58,7 @@
     flex-direction: column;
     justify-items: start;
     gap: 1rem;
-    padding: 1rem 0 1rem 0;
+    padding: 1rem;
 }
 
 .featuredProjects > .project > .text > .title {
@@ -81,23 +89,75 @@
     padding-bottom: 2rem;
 }
 
-.moreProjects{
+.moreProjects {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
 }
 
+.otherProjects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+    width: clamp(16rem, 90vw, 1000px + 2rem)
+}
+
+.otherProjects > .project {
+    background-color: var(--ternary);
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-in-out;
+}
+
+.otherProjects > .project:hover {
+    transform: translate3d(0, -5px, 0);
+    box-shadow: 0 5px 0 0 var(--secondary);
+}
+
+.otherProjects > .project > .text {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.otherProjects h2 {
+    font-size: 22pt;
+}
+
+.otherProjects h2, .otherProjects h3 {
+    text-align: center;
+}
+
 .github {
     filter: invert(16%) sepia(14%) saturate(4193%) hue-rotate(185deg) brightness(90%) contrast(88%);
     transition: all .2s ease-in-out;
+    display: block;
+    margin: auto;
 }
+
 .github:hover {
     transform: scale(1.1);
+}
+
+
+@media (max-width: 800px) {
+    .otherProjects {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (max-width: 600px) {
     .featuredProjects > .project {
         flex-direction: column;
     }
+
 }

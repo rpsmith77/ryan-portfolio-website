@@ -13,7 +13,7 @@ type Props = {
 
 const Project: FunctionComponent<Props> = ({title, subtitle, description, builtWith, image = null, website = ''}) => {
     return (
-        <a href={website} className={styles.project}>
+        <a href={website ? website : ''} className={styles.project}>
             {image && <Image className={styles.image}
                              src={image}
                              alt={`Picture of ${title}`}
