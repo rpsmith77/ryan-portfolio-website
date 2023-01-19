@@ -126,7 +126,6 @@
 .job:hover {
     transform: translate3d(0, -5px, 0);
     box-shadow: 0 5px 0 0 var(--secondary);
-    cursor: pointer;
 }
 
 .jobTitle {

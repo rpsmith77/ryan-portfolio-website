@@ -150,6 +150,7 @@ h2 {
 
 .filterSVG {
     filter: invert(16%) sepia(14%) saturate(4193%) hue-rotate(185deg) brightness(90%) contrast(88%);
+    cursor: pointer;
 }
 
 @media (max-width: 600px) {

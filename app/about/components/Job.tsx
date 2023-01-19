@@ -10,7 +10,7 @@ export default function Job(props: any) {
 
 
     return (
-        <div onClick={() => setShowDesc(!showDesc)} className={styles.job}>
+        <div className={styles.job}>
             <div className={styles.jobTitle}>
                 <h2>{props.title} - {props.company}</h2>
             </div>
@@ -27,7 +27,11 @@ export default function Job(props: any) {
                         </ul>
                     </div> : null}
                 <div className={showDesc ? styles.seeLess : styles.seeMore}>
-                    <Image className={'filterSVG'} src={ExpandDown} alt={'show more button'} width={30}
+                    <Image onClick={() => setShowDesc(!showDesc)}
+                           className={'filterSVG'}
+                           src={ExpandDown}
+                           alt={'show more button'}
+                           width={30}
                            height={30}/>
                 </div>
             </div>
