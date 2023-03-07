@@ -23,7 +23,7 @@ export default function About() {
         {
             title: 'Learning Assistant',
             company: 'FGCU',
-            date: 'August 2021 - May 2022',
+            date: 'January 2020 - December 2021',
             description: [
                 'Collaborate with other learning assistants, the instructor, and support staff to ensure that the needs of all students are met and that they have the resources and support they need to succeed',
                 'Help students develop their critical thinking, communication, and interpersonal skills through group discussions',
