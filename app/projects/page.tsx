@@ -15,12 +15,12 @@ export default function projects() {
     // }
     const featuredProjects = [
         {
-            title: 'RedDictio',
-            subtitle: 'Utilizing machine learning, to analyze subreddit comments for hate/toxicity',
-            description: 'RedDictio is overall a test of our ability to create a webpage, hook it up to a hosted database, scrape data from reddit, and judge this data using a neural network. It connects to several fields in computing such as Database Design, Data Engineering, Data Science, Machine Learning, Cloud Computing, and Web Development.',
-            builtWith: ['Python', 'Flask', 'API', 'Google Cloud', 'AWS', 'Docker', 'SQL', 'Keras'],
-            image: '/reddit.svg',
-            website: 'https://reddictio.com/'
+            title: 'Realtime NYC Subway Map Visualization',
+            subtitle: 'Real-time LED visualization of NYC subway train locations using MTA data and an ESP32 microcontroller.',
+            description: 'This project is a captivating real-time visualization of the NYC subway system, built using an ESP32 microcontroller and LED strips to dynamically display train locations on a physical map.  Leveraging live data from the MTA through a custom server, the visualization illuminates station LEDs in line-specific colors as trains arrive, creating an engaging and informative representation of the city\'s complex transit network.  This project showcases skills in hardware and software integration, real-time data processing, and physical computing, resulting in a visually striking and functional piece that bridges the digital and physical realms.',
+            builtWith: ['C++', 'Docker', 'JSON', 'ESP32-S3 Microcontroller', 'Programmable LEDs', 'GTFS-Realtime data', 'PlatformIO', 'VSCode'],
+            image: '/mta-svgrepo-com.svg',
+            website: 'https://github.com/rpsmith77/nyc-subway-map'
         },
         {
             title: 'WDW Live Information',
@@ -31,12 +31,12 @@ export default function projects() {
             website: 'https://rpsmith77.github.io/wait_times/'
         },
         {
-            title: 'Military-to-Civilian Terminology Translation Tool: Analysis of Job Data in Technology',
-            subtitle: 'Using real job postings to help veterans make resumes to transition from military to civilian jobs.',
-            description: 'Part of my senior project, my teammates and I developed a system which scrapes indeed for job postings in tech related fields. We then use NLP to analyze this data. This data is then made available to be used in resume creation. The user is able to see the sources of each data post and even go to the original job posting, if they want to apply to that job.',
-            builtWith: ['Python', 'Flask', 'AWS', 'NLP', 'mySQL', 'Github', 'Docker', 'Jira', 'Beautiful Soup'],
-            image: '/resume-4.svg',
-            website: 'https://seniorproject-355719-hez34gdyna-uc.a.run.app/'
+            title: 'RedDictio',
+            subtitle: 'Utilizing machine learning, to analyze subreddit comments for hate/toxicity',
+            description: 'RedDictio is overall a test of our ability to create a webpage, hook it up to a hosted database, scrape data from reddit, and judge this data using a neural network. It connects to several fields in computing such as Database Design, Data Engineering, Data Science, Machine Learning, Cloud Computing, and Web Development.',
+            builtWith: ['Python', 'Flask', 'API', 'Google Cloud', 'AWS', 'Docker', 'SQL', 'Keras'],
+            image: '/reddit.svg',
+            website: 'https://github.com/rpsmith77/RedDictio'
         },
         {
             title: 'Accessible Generative Art',
@@ -48,6 +48,13 @@ export default function projects() {
         },
     ];
     const otherProjects = [
+        {
+            title: 'Military-to-Civilian Terminology Translation Tool: Analysis of Job Data in Technology',
+            subtitle: 'Using real job postings to help veterans make resumes to transition from military to civilian jobs.',
+            description: 'Part of my senior project, my teammates and I developed a system which scrapes indeed for job postings in tech related fields. We then use NLP to analyze this data. This data is then made available to be used in resume creation. The user is able to see the sources of each data post and even go to the original job posting, if they want to apply to that job.',
+            builtWith: ['Python', 'Flask', 'AWS', 'NLP', 'mySQL', 'Github', 'Docker', 'Jira', 'Beautiful Soup'],
+            website: 'https://seniorproject-355719-hez34gdyna-uc.a.run.app/'
+        },
         {
             title: 'Manufacturing Production Prototype',
             subtitle: 'Simulates the creation, production, and logging for a manufacturing plant.',

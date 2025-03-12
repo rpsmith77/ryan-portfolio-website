@@ -7,13 +7,18 @@ export default function Profile() {
     return (
         <div className={styles.profile}>
             <h2 className={styles.profileHeader}>
-                I&apos;m Ryan, a <span className={"colorAccent"}>Software Engineer</span> with a passion for
-                helping others and creating incredible experiences.
+                I&apos;m Ryan, a <span className={"colorAccent"}>Software Engineer</span>  with a passion for creating effective and engaging experiences.
             </h2>
             <div className={styles.profilePic}>
                 <Image
                     src={ProfilePic}
                     alt={'Picture of Ryan Smith'}
+                    style={{
+                        objectFit: 'cover',
+                        width: '100%',
+                        height: 'auto',
+                        maxWidth: '460px',
+                    }}
                     width={460}
                     height={460}
                     priority
@@ -21,32 +26,9 @@ export default function Profile() {
             </div>
             <div className={styles.profileDesc}>
                 <h3>
-                    In 2022, I graduated from Florida Gulf Coast University with a B.S. in Software Engineering.
-                    I&apos;ve had some really cool experiences, and I&apos;m proud of what I’ve accomplished.
-                    <br/><br/>
-                    I won the award for the&nbsp;
-                    <a className={styles.profileDescLink}
-                       href={'https://devpost.com/software/generative-art-z7swoc'}>
-                        Most Impactful Hack at Hackabull 2021
-                    </a>
-                    . I gained valuable real-world experience through my internship, where I developed
-                    a&nbsp;
-                    <Link className={styles.profileDescLink} href={'/projects'}>
-                        prototype system
-                    </Link>
-                    &nbsp;to assist veterans in
-                    transitioning from military to civilian jobs. Then, as a learning assistant for both&nbsp;
-                    <span className={styles.italics}>
-                                Intro to Programming
-                            </span> and&nbsp;
-                    <span className={styles.italics}>
-                                Object-Oriented Programming
-                            </span>, I helped students debug their code,
-                    troubleshoot technical issues, and understand complex programming concepts and techniques,
-                    such as inheritance, polymorphism, and interfaces.<br/><br/>
-                    Now, I&apos;m looking for new roles that allow me to use my skills to solve complex
-                    issues with creative solutions and collaborate with teams to develop products that add real
-                    impact.
+                My days at work are spent deep in embedded systems, working with languages like C++ and Python, and it&apos;s a great place to tackle complex challenges. But what really drives me is the creative side of building things.<br></br><br></br>
+                Outside of my professional work, I&apos;m always tinkering with personal projects. I love the feeling of bringing an idea to life, whether it&apos;s a hardware project that integrates software, like my live subway map display, or a web application that solves a real-world problem. It&apos;s the challenge of figuring out how all the pieces fit together that keeps me hooked.<br></br><br></br>
+                I find that my professinal work experience and my personal projects complement each other. The problem-solving skills I use at work translate directly to my personal projects, and the creativity I exercise in my personal projects keeps me energized for my work. It's a continuous cycle of learning and building.
                 </h3>
                 {/*<h3>Let&apos;s get started.</h3>*/}
             </div>

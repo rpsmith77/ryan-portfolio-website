@@ -12,11 +12,11 @@ export default function About () {
       company: 'Thales',
       date: 'May 2023 - Present',
       description: [
-        'Utilize a diverse skill set encompassing C++, Python, Linux, shell scripting, and Docker to develop robust software solutions, streamline system processes, and automate tasks, facilitating efficient development workflows and enhancing overall productivity',
-        'Lead debugging efforts and root cause analysis for system anomalies, implement robust solutions to mitigate risks, and ensure uninterrupted WiFi service during flight operations',
-        'Actively participate in code reviews, knowledge sharing sessions, and mentorship activities, fostering a culture of collaboration, innovation, and professional growth within the engineering team',
-        'Successfully lead the migration project, orchestrating seamless deployment and ensuring compatibility with existing hardware and software components while transitioning the embedded system\'s operating environment from CentOS 7 to AlmaLinux 9',
-        'Engaged in Thales-led Graduate Program aimed at cultivating leadership abilities, where I actively participated in specialized training modules, mentorship sessions, and practical projects to develop strategic thinking, communication prowess, and effective team management skills'
+        'Developed and maintained embedded systems software for Inflight Entertainment and Connectivity systems.',
+        'Assumed responsibility for software development and maintenance of legacy IFEC systems.',
+        'Executed the upgrade of critical systems from CentOS 7 to AlmaLinux.',
+        'Participated in Thales\'s Graduate Program, focusing on ESG project development and presentation to senior leadership. Returned as a mentor for subsequent program cohorts.',
+        'Stack: Linux, C++, Python, Bash/Shell, VSCode, Jira, Confluence, Git, Gitlab',
       ],
     },
     {
