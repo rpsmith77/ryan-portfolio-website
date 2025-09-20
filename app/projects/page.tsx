@@ -18,7 +18,7 @@ export default function projects() {
             title: 'Realtime NYC Subway Map Visualization',
             subtitle: 'Real-time LED visualization of NYC subway train locations using MTA data and an ESP32 microcontroller.',
             description: 'This project is a captivating real-time visualization of the NYC subway system, built using an ESP32 microcontroller and LED strips to dynamically display train locations on a physical map.  Leveraging live data from the MTA through a custom server, the visualization illuminates station LEDs in line-specific colors as trains arrive, creating an engaging and informative representation of the city\'s complex transit network.  This project showcases skills in hardware and software integration, real-time data processing, and physical computing, resulting in a visually striking and functional piece that bridges the digital and physical realms.',
-            builtWith: ['C++', 'Docker', 'JSON', 'ESP32-S3 Microcontroller', 'Programmable LEDs', 'GTFS-Realtime data', 'PlatformIO', 'VSCode'],
+            builtWith: ['C++', 'Python (Flask)', 'Docker', 'WebSockets', 'ESP32', 'PlatformIO', 'GTFS-Realtime'],
             image: '/mta-svgrepo-com.svg',
             website: 'https://github.com/rpsmith77/nyc-subway-map'
         },
