@@ -4,60 +4,38 @@ import Profile from './components/Profile'
 import Image from 'next/image'
 import ResumeSVG from '../../public/resume.svg'
 import Link from 'next/link'
+import {jobs} from '@/app/data/portfolio'
+import type {Metadata} from 'next'
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'Learn about Ryan Smith\'s software engineering experience, skills, and background.',
+  alternates: {canonical: '/about'},
+  openGraph: {
+    title: 'About Ryan Smith',
+    description: 'Software engineering experience spanning embedded systems, C++, Python, and cloud delivery.',
+    url: '/about',
+  },
+}
 
 export default function About () {
-  const jobs = [
-    {
-      title: 'Software Engineer',
-      company: 'Thales',
-      date: 'May 2023 - Present',
-      description: [
-        'Developed and maintained embedded systems software for Inflight Entertainment and Connectivity systems.',
-        'Assumed responsibility for software development and maintenance of legacy IFEC systems.',
-        'Executed the upgrade of critical systems from CentOS 7 to AlmaLinux.',
-        'Participated in Thales\'s Graduate Program, focusing on ESG project development and presentation to senior leadership. Returned as a mentor for subsequent program cohorts.',
-        'Stack: Linux, C++, Python, Bash/Shell, VSCode, Jira, Confluence, Git, Gitlab',
-      ],
-    },
-    {
-      title: 'Software Engineer Intern',
-      company: 'Intevations LLC',
-      date: 'August 2021 - May 2022',
-      description: [
-        'Develop a system to help veterans create resumes to transition from military to civilian jobs',
-        'Use Natural Language Processing to determine what skills are being sought after based on real job postings',
-        'Elicit Requirements from Sponsor',
-        'Participate in a modified SCRUM',
-        'Build Front End using Flask',
-        'Setup and maintain CI/CD Pipeline utilizing Github Actions and AWS ECR and ECS',
-      ],
-    },
-    {
-      title: 'Learning Assistant',
-      company: 'FGCU',
-      date: 'January 2020 - December 2021',
-      description: [
-        'Collaborate with other learning assistants, the instructor, and support staff to ensure that the needs of all students are met and that they have the resources and support they need to succeed',
-        'Help students develop their critical thinking, communication, and interpersonal skills through group discussions',
-        'Help students debug their code, troubleshoot technical issues, and understand complex programming concepts and techniques, such as inheritance, polymorphism, and interfaces',
-      ],
-    },
-  ]
   return (
     <div className={styles.container}>
-      <main className={styles.main}>
+      <main id="main-content" tabIndex={-1} className={styles.main}>
         <Profile/>
-        <div className={styles.experience}>
+        <section className={styles.experience} aria-labelledby="experience">
           <div className={styles.experienceTitle}>
-            <h1 id={'experience'}>Experience</h1>
+            <h2 id="experience">Experience</h2>
             <Link href={'/RyanSmithResume.pdf'}
-                  className={styles.resume}>
+                  className={styles.resume}
+                  aria-label="View Ryan Smith's resume as a PDF">
               <Image src={ResumeSVG}
-                     alt={'Resume'}
+                alt=""
+                aria-hidden="true"
                      width={50}
                      height={50}
               />
-              <h4>Resume</h4>
+              <span>Resume</span>
             </Link>
 
           </div>
@@ -70,7 +48,7 @@ export default function About () {
               description={job.description}
             />)
           }
-        </div>
+        </section>
 
       </main>
 

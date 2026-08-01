@@ -1,22 +1,14 @@
 import styles from "../page.module.css"
 import Image from "next/image"
-import {FunctionComponent} from "react";
+import type {ProjectData} from "@/app/data/portfolio";
 
-type Props = {
-    title: string,
-    subtitle: string
-    description: string,
-    builtWith: string[],
-    image?: string,
-    website?: string,
-}
-
-const Project: FunctionComponent<Props> = ({title, subtitle, description, builtWith, image = null, website = ''}) => {
+const Project = ({title, subtitle, description, builtWith, image, website}: ProjectData) => {
     return (
-        <a href={website ? website : ''} className={styles.project}>
+        <a href={website} className={styles.project} target="_blank" rel="noopener noreferrer">
             {image && <Image className={styles.image}
                              src={image}
-                             alt={`Picture of ${title}`}
+                             alt=""
+                             aria-hidden="true"
                              width={250}
                              height={250}
 
@@ -25,13 +17,14 @@ const Project: FunctionComponent<Props> = ({title, subtitle, description, builtW
                 <h2 className={styles.title}>{title}</h2>
                 <h3 className={styles.subtitle}>{subtitle}</h3>
                 <p className={styles.description}>{description}</p>
-                <h4 className={styles.builtWith}>{builtWith.map((tool: string, index: number) => {
+                <p className={styles.builtWith}><span className={styles.visuallyHidden}>Built with: </span>{builtWith.map((tool, index) => {
                     if (index !== builtWith.length - 1) {
                         return <span key={index}>{tool}, </span>;
                     } else {
                         return <span key={index}>and {tool}.</span>;
                     }
-                })}</h4>
+                })}</p>
+                <span className={styles.visuallyHidden}>(opens in a new tab)</span>
             </div>
 
         </a>

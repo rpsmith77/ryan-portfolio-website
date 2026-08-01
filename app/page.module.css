@@ -13,6 +13,11 @@
     margin: auto;
 }
 
+.welcome {
+    font-size: clamp(20px, 4vw, 40px);
+    font-weight: 700;
+}
+
 .heroGradientText {
     color: #fff;
     background: var(--accent);
@@ -36,6 +41,7 @@
 
 .contact a {
     transition: all .2s ease-in-out;
+    padding: .5rem;
 }
 
 .contact a:hover {
