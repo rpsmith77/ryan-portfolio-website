@@ -4,7 +4,7 @@ A statically rendered software engineering portfolio built with Next.js, React, 
 
 ## Development
 
-Requires Node.js 22 or newer.
+Requires Node.js 24.
 
 ```bash
 npm install
